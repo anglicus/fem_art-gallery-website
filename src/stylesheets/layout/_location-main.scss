@@ -1,0 +1,71 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.location {
+  color: $white;
+  background-color: $almostBlack;
+  padding: 48px 16px 54px;
+
+  @include breakpoint-up(medium) {
+    display: grid;
+    grid-template-areas: "heading street-address"
+                         "heading city-state-zip"
+                         "heading blurb";
+
+    padding: 88px 40px 80px;
+    width: 100%;
+
+    @include breakpoint-up(large) {
+      padding: 104px 165px 128px;
+    }
+  }
+
+
+  &__heading {
+    margin-bottom: 48px;
+
+    @include breakpoint-up(medium) {
+      grid-area: heading;
+      margin: 0;
+      padding-right: 68px;
+      width: 291px;
+    }
+
+    @include breakpoint-up(large) {
+      padding-right: 220px;
+      width: 570px;
+    }
+  }
+
+  &__street-address {
+    color: $gold;
+    margin-bottom: 20px;
+
+    @include breakpoint-up(medium) {
+      grid-area: street-address;
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__city-state-zip {
+    margin-bottom: 20px;
+
+    @include breakpoint-up(medium) {
+      grid-area: city-state-zip;
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__blurb {
+
+    @include breakpoint-up(medium) {
+      grid-area: blurb;
+    }
+  }
+}

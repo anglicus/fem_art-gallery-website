@@ -1,0 +1,204 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.hero {
+
+  @include breakpoint-up(medium) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 120px;
+  }
+
+  &__image {
+
+    @include breakpoint-up(large) {
+      background-color: $almostBlack;
+      padding-left: 450px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__div-text {
+    padding: 32px 16px 120px;
+
+    @include breakpoint-up(medium) {
+      position: relative;
+      padding: 145px 0 0;
+      margin-left: -6.25%;
+      margin-right: 25px;
+    }
+
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-areas: "heading blurb"
+                           "heading cta";
+      grid-template-columns: auto 350px;
+      margin: 189px 165px 0;
+      width: 100%;
+      padding: 0;
+    }
+
+  }
+
+  &__heading {
+    @include breakpoint-up(large) {
+      grid-area: heading;
+    }
+  }
+
+  &__heading-white {
+    display: none;
+
+    @include breakpoint-up(large) {
+      display: block;
+      grid-area: heading;
+      color: $white;
+      position: absolute;
+      clip: rect(0px, 285px, 300px, 0px);
+    }
+  }
+
+  &__blurb {
+    margin-top: 32px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 48px;
+    }
+
+    @include breakpoint-up(large) {
+      grid-area: blurb;
+      justify-self: end;
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    margin-top: 32px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 48px;
+    }
+
+    @include breakpoint-up(large) {
+      grid-area: cta;
+      margin-top: 64px;
+    }
+  }
+}
+
+.teaser {
+
+  padding: 0 16px 120px; 
+
+  @include breakpoint-up(medium) {
+
+    padding: 0;
+    margin: 0 auto;
+    width: 689px;
+
+    display: grid;
+    grid-template-areas: "your-day image-grid-1 image-grid-1"
+                         "image-grid-2 image-grid-2 image-grid-3"
+                         "image-grid-2 image-grid-2 be-inspired";
+    column-gap: 11px;
+    row-gap: 11px;
+  }
+
+  @include breakpoint-up(large) {
+    margin: 496px auto 0;
+    width: 1110px;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  &__image-grid-1 {
+    margin-bottom: 25px;
+
+    @include breakpoint-up(medium) {
+      grid-area: image-grid-1;
+      margin: 0;
+    }
+
+  }
+
+  &__image-grid-2 {
+    margin-bottom: 16px;
+
+
+    @include breakpoint-up(medium) {
+      grid-area: image-grid-2;
+      margin: 0;
+    }
+  }
+
+  &__image-grid-3 {
+    margin-bottom: 16px;
+
+
+    @include breakpoint-up(medium) {
+      margin: 0;
+      grid-area: image-grid-3;
+    }
+  }
+
+  &__div-your-day {
+    margin-bottom: 32px;
+    grid-area: your-day;
+
+    @include breakpoint-up(medium) {
+      margin: 0;
+      padding-top: 36px;
+      padding-right: 56px;
+      width: 280px;
+    }
+
+    @include breakpoint-up(large) {
+      padding-top: 60px;
+      padding-right: 95px;
+      width: 445px;
+    }
+  }
+
+  &__heading-your-day {
+    margin-bottom: 21px;
+
+    @include breakpoint-up(medium) {
+      margin-bottom: 24px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__div-be-inspired {
+    color: $white;
+    background-color: $almostBlack;
+    padding: 48px 24px;
+
+
+    @include breakpoint-up(medium) {
+      grid-area: be-inspired;
+      padding: 85px 29px;
+      width: 280px;
+    }
+
+    @include breakpoint-up(large) {
+      padding: 64px 48px 64px;
+      width: 445px;
+    }
+  }
+
+  &__heading-be-inspired {
+    margin-bottom: 24px;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 32px;
+    }
+  }
+
+
+
+}

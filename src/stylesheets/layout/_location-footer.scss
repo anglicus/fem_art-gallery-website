@@ -1,0 +1,59 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.footer {
+  background-color: $gold;
+
+  padding: 48px 32px 44px;
+
+  @include breakpoint-up(medium) {
+    padding: 56px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include breakpoint-up(large) {
+    padding: 80px 165px;
+  }
+
+  &__logo {
+    margin-bottom: 36px;
+
+    @include breakpoint-up(medium) {
+      margin: 0;
+    }
+
+    @include breakpoint-up(large) {
+      width: 160px;
+    }
+  }
+
+  &__blurb {
+    margin-bottom: 36px;
+
+    @include breakpoint-up(medium) {
+      margin: 0 10.18% 0 0;
+      width: 281px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: 12.61%;
+      margin-right: 25.22%;
+      width: 430px; 
+    }
+  }
+
+  &__div-social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+  }
+
+  &__social-icon {
+    filter: invert(98%);
+  }
+
+}

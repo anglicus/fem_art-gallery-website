@@ -1,0 +1,114 @@
+@use "../abstracts/mixins" as *;
+
+html {
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+// heading XL
+h1 {
+  font-size: 3.75rem;
+  line-height: 3.4375rem;
+
+  @include breakpoint-up(medium) {
+    font-size: 4.375rem;
+    line-height: 4.0625rem;
+  }
+  
+  @include breakpoint-up(large) {
+    font-size: 6rem;
+    line-height: 5.5rem;
+  }
+
+}
+
+// heading L
+h2 {
+  font-size: 3.125rem;
+  line-height: 2.8125rem;
+
+  @include breakpoint-up(medium) {
+    font-size: 3.4375rem;
+    line-height: 3.125rem;
+  }
+  
+  @include breakpoint-up(large) {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+  }
+}
+
+// heading M
+h3 {
+  font-size: 3.125rem;
+  line-height: 2.8125rem;
+
+  // medium same as small
+  
+  @include breakpoint-up(large) {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+  }
+}
+
+// heading S
+h4 {
+  font-size: 2rem;
+  line-height: 2rem;
+
+  // medium same as small
+  
+  @include breakpoint-up(large) {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+}
+
+// footer heading
+h5 {
+  font-size: 1.5rem;
+  
+}
+
+// body
+p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+
+  // medium same as small
+  
+  @include breakpoint-up(large) {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+// footer
+.footer-text {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 300;
+
+  // medium same as small
+  
+  @include breakpoint-up(large) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+
+button {
+  // same on all screen sizes
+
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.5rem;
+  letter-spacing: 3.64px;
+  text-transform: uppercase;
+}

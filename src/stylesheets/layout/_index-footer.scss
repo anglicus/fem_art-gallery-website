@@ -1,0 +1,61 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.footer {
+
+
+  color: $white;
+  background-color: $almostBlack;
+  
+  padding: 48px 32px;
+
+  @include breakpoint-up(medium) {
+    margin-top: 120px;
+    padding: 56px 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include breakpoint-up(large) {
+    margin-top: 180px;
+    padding: 80px 165px;
+  }
+
+  &__logo {
+    width: 111px;
+    height: 40px;
+
+    @include breakpoint-up(large) {
+      width: 160px;
+      height: 58px;
+    }
+  }
+
+
+  &__blurb {
+    margin: 36px 0 36px;
+
+    @include breakpoint-up(medium) {
+      width: max(281px, 40.8%);
+      margin: 0 0 0 max(64px, 9.3%);
+    }
+
+    @include breakpoint-up(large) {
+      width: 38.7%; // max(430px, 38.7%);
+      margin: 0 0 0 12.6%; // max(140px, 12.6%);
+    }
+  }
+
+ 
+  &__div-social-icons {
+    margin-left: auto;
+  }
+  
+
+  &__social-icon {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}

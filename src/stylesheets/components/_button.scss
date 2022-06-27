@@ -1,0 +1,41 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+
+.button-link {
+  position: relative;
+  width: 260px;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $white;
+  background-color: $almostBlack;
+
+  border: none;
+
+  cursor: pointer;
+
+  &__text {
+    width: 100%;
+    padding: auto;
+  }
+
+  &__arrow {
+    background-color: $gold;
+    height: 100%;
+    padding: 24px;
+    width: 56px;
+  }
+
+
+  &:hover {
+    background-color: $gold;
+  }
+
+  &:hover .button-link__arrow {
+      background-color: $almostBlack;
+  }
+}
