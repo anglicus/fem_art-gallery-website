@@ -202,6 +202,10 @@ button {
   }
 }
 
+.header__map {
+  width: 100%;
+}
+
 .location {
   color: rgb(255, 255, 255);
   background-color: rgb(21, 21, 21);
