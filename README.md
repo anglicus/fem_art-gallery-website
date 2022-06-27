@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshots
 
-![Mobile-Home](./Screenshot Mobile - Home.png)
+![Mobile-Home](Screenshot Mobile - Home.png)
 ![Mobile-Location](./Screenshot Mobile - Location.png)
 ![Tablet-Home](./Screenshot Tablet - Home.png)
 ![Tablet-Location](./Screenshot Tablet - Location.png)
